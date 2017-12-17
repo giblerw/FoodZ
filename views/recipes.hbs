@@ -1,0 +1,15 @@
+<section>
+  <h1>Recipe List</h1>
+  {{#each food.results}}
+          <hr />
+          <figure>
+            <img src="{{thumbnail}}" alt="{{title}} cover photo" />
+          </figure>
+          <a href="{{href}}"><h5>{{title}}</h5></a>
+          <ol>
+            <li>{{ingredients}}</li>
+          </ol>
+          <hr />
+        {{/each}}
+        
+</section>

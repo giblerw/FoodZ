@@ -1,15 +1,32 @@
 <section>
   <h1>Recipe List</h1>
+
   {{#each food.results}}
-          <hr />
+    <hr />
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
           <figure>
             <img src="{{thumbnail}}" alt="{{title}} cover photo" />
           </figure>
+        </div>
+        <div class="col-lg-4">
           <a href="{{href}}"><h5>{{title}}</h5></a>
           <ol>
-            <li>{{ingredients}}</li>
+            <li>Ingredients:{{ingredients}}</li>
           </ol>
-          <hr />
+        </div>
+        <div class="col">
+          <h6>Add recipe to meal plan</h6>
+          <div class="btn-group" role="group" aria-label="Meal assignment">
+            <button type="submit" class="btn btn-warning">Breakfast</button>
+            <button type="submit" class="btn btn-secondary">Lunch</button>
+            <button type="submit" class="btn btn-success">Dinner</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
         {{/each}}
-        
+
 </section>

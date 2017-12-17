@@ -11,7 +11,6 @@ var http = require('http')
 router.get('/0', function(req, res) {
     request('http://www.recipepuppy.com/api/', function(error, response, body) {
         const food = JSON.parse(body)
-        console.log(food.results);
         res.render('recipes', {food})
     });
 });

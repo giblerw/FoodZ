@@ -9,8 +9,8 @@ const cookieSession = require('cookie-session');
 const routes = require("./routes/index");
 const recipes = require("./routes/recipes");
 const users = require("./routes/users");
-const key = process.env.COOKIE_KEY || 'keyboard cat'
-
+const key = process.env.COOKIE_KEY || 'keyboard cat';
+const public = require('./public');
 
 const app = express();
 
@@ -20,10 +20,12 @@ app.set("view engine", "hbs");
 
 // body-parser
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static('routes'));
+
+// app.use("/public", public);
 
 app.use(cookieSession({
   name: 'session',

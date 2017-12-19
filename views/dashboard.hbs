@@ -4,9 +4,11 @@
   <hr />
   <a href="/recipes/0"><button>All Recipes</button></a>
   <hr />
-  <form action="/recipes">
-    Search:<br>
-    <input type="text" name="search-input" value="" placeholder="Search Recipes"><br>
+  <form action="/recipes/search" method="POST">
+    Search by Ingredients:<br>
+    <input type="text" name="ingredients" value="" placeholder="Search by Ingredients"><br>
+    Search by Keyword:<br>
+    <input type="text" name="type" value="" placeholder="Search by Keyword"><br>
     <button>Enter</button>
   </form>
 </section>

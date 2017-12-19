@@ -1,0 +1,34 @@
+<section>
+  <h1>Recipe List</h1>
+<a href="../dashboard">Home</a>
+<hr />
+<a href="/recipes/0">next 10</a>
+  {{#each food.results}}
+    <hr />
+      <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <figure>
+            <img src="{{thumbnail}}" alt="{{title}} cover photo" />
+          </figure>
+        </div>
+        <div class="col-lg-4">
+          <a href="{{href}}"><h5>{{title}}</h5></a>
+          <ol>
+            <li>Ingredients:{{ingredients}}</li>
+          </ol>
+        </div>
+        <div class="col">
+          <h6>Add recipe to meal plan</h6>
+          <div class="btn-group" role="group" aria-label="Meal assignment">
+            <button type="submit" class="btn btn-warning">Breakfast</button>
+            <button type="submit" class="btn btn-secondary">Lunch</button>
+            <button type="submit" class="btn btn-success">Dinner</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+        {{/each}}
+
+</section>

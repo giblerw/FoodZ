@@ -1,32 +1,63 @@
 <section>
   <h1>Recipe List</h1>
-<a href="../">Home</a>
+<a href="../dashboard">Home</a>
+<hr />
+
   {{#each food.results}}
     <hr />
-      <div class="container">
-      <div class="row">
-        <div class="col-lg-2">
-          <figure>
-            <img src="{{thumbnail}}" alt="{{title}} cover photo" />
-          </figure>
-        </div>
-        <div class="col-lg-4">
-          <a href="{{href}}"><h5>{{title}}</h5></a>
-          <ol>
-            <li>Ingredients:{{ingredients}}</li>
-          </ol>
-        </div>
+    <div class="row align-items-center">
+      <div class="col">
+      </div>
         <div class="col">
-          <h6>Add recipe to meal plan</h6>
-          <div class="btn-group" role="group" aria-label="Meal assignment">
-            <button type="submit" class="btn btn-warning">Breakfast</button>
-            <button type="submit" class="btn btn-secondary">Lunch</button>
-            <button type="submit" class="btn btn-success">Dinner</button>
+        <div class="card text-center">
+          <div class="card-header">
+            <h3>{{title}}</h3>
+          </div>
+          <div class="card-body">
+            <figure>
+              <img src="{{thumbnail}}" alt="{{title}} cover photo" />
+            </figure>
+            <h6 class="card-title"><a href="{{href}}"><h6>Learn More</h5></a></h4>
+              <p class="card-text">Ingredients:{{ingredients}}</p>
+              <div class="btn-group" role="group" aria-label="Meal assignment">
+                  <button type="submit" class="btn btn-warning">Breakfast</button>
+                  <button type="submit" class="btn btn-secondary">Lunch</button>
+                  <button type="submit" class="btn btn-success">Dinner</button>
+                </div>
+              </div>
+              <div class="card-footer text-muted">
+                Add to meal queue
+            </div>
           </div>
         </div>
+      
+      <div class="col">
       </div>
     </div>
     <hr />
         {{/each}}
 
 </section>
+<!-- <div class="container">
+<div class="row">
+  <div class="col-lg-2">
+    <figure>
+      <img src="{{thumbnail}}" alt="{{title}} cover photo" />
+    </figure>
+  </div>
+  <div class="col-lg-4">
+    <a href="{{href}}"><h5>{{title}}</h5></a>
+    <ol>
+      <li>Ingredients:{{ingredients}}</li>
+    </ol>
+  </div>
+  <div class="col">
+    <h6>Add recipe to meal plan</h6>
+    <div class="btn-group" role="group" aria-label="Meal assignment">
+      <button type="submit" class="btn btn-warning">Breakfast</button>
+      <button type="submit" class="btn btn-secondary">Lunch</button>
+      <button type="submit" class="btn btn-success">Dinner</button>
+    </div>
+  </div>
+</div>
+</div> -->

@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'http://www.recipepuppy.com/api/'
+    connection: 'postgres://localhost/myFoodZ'
   },
 
   production: {
